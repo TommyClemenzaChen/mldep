@@ -1,7 +1,6 @@
 from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
-from flask_cors import CORS,cross_origin
 
 
 from sklearn.preprocessing import StandardScaler
@@ -12,12 +11,10 @@ app = application
 
 ## Route for home page
 @app.route('/')
-@cross_origin()
 def index(): 
     return render_template('index.html')
 
 @app.route('/predict', methods=['GET', 'POST'])
-@cross_origin()
 def predict_datapoint():
     if request.method=='GET':
         return render_template('home.html')
@@ -39,5 +36,5 @@ def predict_datapoint():
         return render_template('home.html', results=result[0])
     
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port = 5000)
     # http://127.0.0.1:5000/
