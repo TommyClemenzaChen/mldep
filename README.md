@@ -6,4 +6,6 @@
   * Create an ec2 role if you dont have it
 * Create a codepipeline and connect it with github and elastic beanstalk. 
 
-## azure
+## azure(USE THE CORRECT PYTHTON VERISON)
+* Create a web app using azure and connect to github
+* 
