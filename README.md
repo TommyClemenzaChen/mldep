@@ -11,7 +11,7 @@
 
 ## AWS Deplyoment production(idk more complicated guess) + Docker!
 * Create and build docker image and workflow
-  * Workflow file can be found in github actions
+  * Workflow file can be found in github actions, adjust the aws yaml file(we didnt use ecs)
 * Create IAM user with EC2containerREgistryFullcess and EC2FullAccess
   * download the csv for retrieve access key
 * Create ECR(private)
@@ -22,6 +22,7 @@
   * Create Key pair(RSA)
   * allow HTTP and https from traffic
 * Connect to ec2 after it finishes
+  * Also, in security, edit security group and add a new inbound rule, custom TCP port: 5000(what ever you set your port in application.py). source: 0.0.0.0/0
   * Run(maybe try to learn what each command does):
 ```
 sudo apt-get update -y
@@ -35,12 +36,13 @@ newgrp docker
  * Download(paste the code listed in the runner page)
  * Name of runner: self-hosted
  * No name for runner group, no need for additonal labels and no name for work folder.
-* Screts and variables/actions
+* Secrets and variables/actions
  * AWS_ACCESS_KEY_ID: From the csv file
  * AWS_SECRET_ACCESS_KEY: csv file
- * AWS_REGION: us-west-1
+ * AWS_REGION: us-west-1(you can just manually enter in the aws.yaml file)
  * AWS_ECR_LOGIN_URI: you should have saved it
  * ECR_REPOSITORY_NAME: repo name i think
+ 
 
  
 
