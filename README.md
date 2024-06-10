@@ -6,6 +6,41 @@
   * Create an ec2 role if you dont have it
 * Create a codepipeline and connect it with github and elastic beanstalk. 
 
-## azure(USE THE CORRECT PYTHTON VERISON)
+## azure(USE THE CORRECT PYTHTON VERISON)(the yml file for workflow is in azure-web branch)
 * Create a web app using azure and connect to github
-* 
+
+## AWS Deplyoment production(idk more complicated guess) + Docker!
+* Create and build docker image and workflow
+  * Workflow file can be found in github actions
+* Create IAM user with EC2containerREgistryFullcess and EC2FullAcess
+  * download the csv for retrieve access key
+* Create ECR(private)
+  * save the url
+* Create/launch ec2 instance
+  * Ubuntu
+  * instance type: t2.medium
+  * Create Key pair(RSA)
+  * allow HTTP and https from traffic
+* Connect to ec2 after it finishes
+  * Run(maybe try to learn what each command does):
+```
+sudo apt-get update -y
+sudo apt-get upgrade
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker ubuntu
+newgrp docker
+```
+* Create new self hosted runner(idk the diff between this one(acccess it through settings rather than actions) and the one on actions)
+ * Download(paste the code listed in the runner page)
+ * Name of runner: self-hosted
+ * No name for runner group, no need for additonal labels and no name for work folder.
+* Screts and variables/actions
+ * AWS_ACCESS_KEY_ID: From the csv file
+ * AWS_SECRET_ACCESS_KEY: csv file
+ * AWS_REGION: us-west-1
+ * AWS_ECR_LOGIN_URI: you should have saved it
+ * ECR_REPOSITORY_NAME: repo name i think
+
+ 
+
