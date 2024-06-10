@@ -12,7 +12,7 @@
 ## AWS Deplyoment production(idk more complicated guess) + Docker!
 * Create and build docker image and workflow
   * Workflow file can be found in github actions
-* Create IAM user with EC2containerREgistryFullcess and EC2FullAcess
+* Create IAM user with EC2containerREgistryFullcess and EC2FullAccess
   * download the csv for retrieve access key
 * Create ECR(private)
   * save the url
