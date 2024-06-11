@@ -6,7 +6,7 @@ This project is a deplyoment guide for AWS, azure, AWS + docker, Azure + docker 
 * Using the wrong python version
 * Using the wrong file name in docker file(app.py instead of applicaiton.py) 
 * Missspleing everyhitng
-* Not getting hired <- big one
+* Not getting hired <- big one 
 
 ## AWS deployment with Elastic beanstalk(only works for python 3.8)
 * Create an environment in elastic beanstalk
