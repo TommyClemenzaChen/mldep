@@ -1,4 +1,12 @@
-#### My deployed project
+## Deployment guide for myself
+
+This project is a deplyoment guide for AWS, azure, AWS + docker, Azure + docker for myself because i probably will end up forgetting everything after 3 days.
+
+### STUPID MISTAKES I HAVE MADE
+* Using the wrong python version
+* Using the wrong file name in docker file(app.py instead of applicaiton.py)
+* Missspleing everyhitng
+* Not getting hired <- big one
 
 ## AWS deployment with Elastic beanstalk(only works for python 3.8)
 * Create an environment in elastic beanstalk
