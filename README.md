@@ -2,7 +2,7 @@
 * Create a container registry(Create resource group if needed
   * after container registry created, go to access keys and enable admin
   * also save the login server and password
-* Build docker image:
+* Build docker image(when login, use ur username and password above):
   ```
   docker build -t <login server URL>/<name your application>:latest .
   docker login <login server URL>
@@ -19,5 +19,7 @@
   * set continous deplyoment to on
   * Then in source, go to github actions
     * put your github stuff in there and set the correct values
+   
+  FInished
     
    
