@@ -4,7 +4,7 @@ This project is a deplyoment guide for AWS, azure, AWS + docker, Azure + docker 
 
 ### STUPID MISTAKES I HAVE MADE
 * Using the wrong python version
-* Using the wrong file name in docker file(app.py instead of applicaiton.py)
+* Using the wrong file name in docker file(app.py instead of applicaiton.py) 
 * Missspleing everyhitng
 * Not getting hired <- big one
 
